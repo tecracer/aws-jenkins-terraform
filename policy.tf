@@ -67,7 +67,8 @@ resource "aws_iam_role_policy" "jenkins_policy" {
                 "ec2:DetachInternetGateway",
                 "ec2:DisassociateRouteTable",
                 "ec2:ModifySubnetAttribute",
-                "ec2:RevokeSecurityGroupEgress"
+                "ec2:RevokeSecurityGroupEgress",
+                "ssm:*"
             ],
             "Resource": "*"
         }
