@@ -19,7 +19,7 @@ resource "aws_instance" "jenkins" {
   security_groups = [aws_security_group.web_traffic.name]
   key_name = "labkey"
   user_data = file("userdata/jenkins.sh")
-
+  iam_instance_profile = aws_iam_instance_profile.jenkins_profile.name
 
   connection {
     type        = "ssh"
